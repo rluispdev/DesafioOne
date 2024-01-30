@@ -3,3 +3,8 @@
 body {
     background-color: #E5E5E5;
 }
+.logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    color: #0A3871;
+}
