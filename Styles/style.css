@@ -16,3 +16,10 @@ body {
     color: #0A3871;
     font-weight: 400;
 }
+
+.alert {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: #495057;
+    font-weight: 400;
+}
