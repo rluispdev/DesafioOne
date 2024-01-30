@@ -7,4 +7,12 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 40px;
     color: #0A3871;
+    font-weight: 700;
+}
+
+.textField{
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    color: #0A3871;
+    font-weight: 400;
 }
