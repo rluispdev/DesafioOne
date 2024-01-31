@@ -1,13 +1,27 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-.configDisplayFlex{
-    display: flex;
-   
+*{
+    margin: 0;
+    padding: 0;
 }
+
 body {
     background-color: #E5E5E5;
+
 }
+.configDisplayFlex{
+    display: flex;
+    gap: 48px;
+   
+}
+
+.encoder__Text{
+
+  
+    
+}
+
 .logo {
     font-family: 'Inter', sans-serif;
     font-size: 40px;
@@ -53,11 +67,13 @@ body {
 }
 
 .bgCodedMessage{
+    display: flex;
     background-color: #FFFFFF;
     flex-direction: column;
      width: 400px;
      height: 944px;
      border-radius: 32px;
+     gap: 40px;
 }
 
 .textAlert{
