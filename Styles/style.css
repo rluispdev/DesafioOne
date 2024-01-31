@@ -50,6 +50,7 @@ body {
     color: #495057;
     font-weight: 400;
     padding-bottom: 8px;
+    
 }
 
 
@@ -78,7 +79,7 @@ body {
 }
 
 .textLayout{
-    margin-top: 336px;
+    margin-top: 283px;
     text-align: center;
     
 }
@@ -90,6 +91,7 @@ body {
      width: 400px;
      height: 944px;
      border-radius: 32px;
+     margin-right: 1032px;
  
 }
 
