@@ -11,9 +11,9 @@ body {
     height: 100vh;
 
 }
-.configDisplayFlex{
+.configDisplayFlexMain{
     display: flex;
-    gap: 48px;
+    justify-content: space-between;
    
 }
 
@@ -29,7 +29,7 @@ body {
     color: #0A3871;
     font-weight: 700;
     padding-left: 40px;
-   
+  
 }
 
 .textField{
@@ -37,6 +37,7 @@ body {
     font-size: 32px;
     color: #0A3871;
     font-weight: 400;
+    padding-left: 240px;
     
 }
 
