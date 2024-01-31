@@ -14,12 +14,13 @@ body {
 .configDisplayFlexMain{
     display: flex;
     justify-content: space-between;
-   
+    margin: 40px 40px 40px 40px;
+ 
 }
 
 .encoder__Text{
 
-  
+ 
     
 }
 
@@ -29,16 +30,18 @@ body {
     color: #0A3871;
     font-weight: 700;
     padding-left: 40px;
+    padding: 48px;
   
 }
 
 .textField{
+    width: 680px;
     font-family: 'Inter', sans-serif;
     font-size: 32px;
     color: #0A3871;
     font-weight: 400;
     padding-left: 240px;
-    
+    margin-bottom: 680px;
 }
 
 .alert {
@@ -46,7 +49,9 @@ body {
     font-size: 12px;
     color: #495057;
     font-weight: 400;
+    padding-bottom: 8px;
 }
+
 
 .buttonStyle{
     background-color: #0A3871;
@@ -55,7 +60,7 @@ body {
     border-radius: 24px;
     border: none;
     color: #FFFFFF;
-
+  
 }
 
 .buttonStyle2{
@@ -65,7 +70,17 @@ body {
     border-radius: 24px;
     border: 1px solid #0A3871;
     color: #0A3871;
+   margin-left: 24px;
+}
 
+.alertGroup{
+    padding-left: 67px;
+}
+
+.textLayout{
+    margin-top: 304px;
+    text-align: center;
+    
 }
 
 .bgCodedMessage{
@@ -75,7 +90,7 @@ body {
      width: 400px;
      height: 944px;
      border-radius: 32px;
-     gap: 40px;
+ 
 }
 
 .textAlert{
@@ -83,6 +98,8 @@ body {
     font-size: 24px;
     color: #343A40;
     font-weight: 700;
+   padding: 16px;
+   
 }
 
 .textAlert2{
@@ -90,6 +107,7 @@ body {
     font-size: 16px;
     color: #495057;
     font-weight: 400;
+  padding: 24px;
 }
 
 .buttonStyle3{
@@ -99,5 +117,7 @@ body {
     border-radius: 24px;
     border: 1px solid #0A3871;
     color: #0A3871;
-
+    margin-top: 67px;
+    margin-left: 24px;
+    margin-right: 24px;
 }
