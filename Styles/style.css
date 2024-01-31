@@ -18,6 +18,11 @@ body {
  
 }
 
+.configDisplayFlex{
+    display: flex;
+    align-items: center;
+}
+
 .encoder__Text{
 
  
@@ -122,3 +127,5 @@ body {
     margin-left: 24px;
     margin-right: 24px;
 }
+
+ 
