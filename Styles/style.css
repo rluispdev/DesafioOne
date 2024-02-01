@@ -33,20 +33,14 @@ body {
   
 }
 
-.marginCustom{
-    margin-bottom: 680px;
-
-}
-
-
 .textField{
     width: 680px;
     font-family: 'Inter', sans-serif;
     font-size: 32px;
     color: #0A3871;
     font-weight: 400;
-    padding-left: 240px;
-   
+    padding-left: 168px;
+  
 }
 
 .alert {
@@ -91,7 +85,12 @@ body {
 .textLayout{
     margin-top: 283px;
     text-align: center;
+  
     
+}
+
+.betweenSpace{
+ 
 }
 
 .bgCodedMessage{
@@ -101,7 +100,7 @@ body {
      width: 400px;
      height: 944px;
      border-radius: 32px;
-     margin-right: 8000px;
+     margin-right: 1032px;
  
 }
 
@@ -132,6 +131,7 @@ body {
     margin-top: 67px;
     margin-left: 24px;
     margin-right: 24px;
+    
 }
 
  /* https://youtu.be/zILZ6-dlKBs?si=llfxHvMu5bIrVmfx&t=782*/
