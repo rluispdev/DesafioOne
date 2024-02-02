@@ -33,7 +33,7 @@ body {
   
 }
 
-.textField{
+.removeStyle.textField{
     width: 680px;
     font-family: 'Inter', sans-serif;
     font-size: 32px;
@@ -41,6 +41,12 @@ body {
     font-weight: 400;
     padding-left: 168px;
   
+}
+
+.removeStyle {
+  border: unset;
+  padding: unset;
+  background: unset;
 }
 
 .alert {
