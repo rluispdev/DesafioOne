@@ -32,14 +32,18 @@ body {
     padding: 48px;
   
 }
+.aligmentInput {
+    width: 944px;
 
+}
 .removeStyle.textField{
+    padding-left: 168px;
     width: 680px;
     font-family: 'Inter', sans-serif;
     font-size: 32px;
     color: #0A3871;
     font-weight: 400;
-    padding-left: 168px;
+    
   
 }
 
@@ -102,7 +106,7 @@ body {
      width: 400px;
      height: 944px;
      border-radius: 32px;
-     margin-right: 1032px;
+     margin-right: 1000px;
  
 }
 
