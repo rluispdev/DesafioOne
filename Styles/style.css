@@ -43,15 +43,14 @@ body {
     font-size: 32px;
     color: #0A3871;
     font-weight: 400;
-    
-    
-  
 }
 
 .removeStyle {
   border: unset;
   padding: unset;
   background: unset;
+  outline: none;
+  border-color: transparent;
 }
 
 .alert {
