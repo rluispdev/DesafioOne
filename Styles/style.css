@@ -129,7 +129,24 @@ body {
   
 }
 
-/* .buttonStyle3{
+.betweenSpaceText{
+
+}
+
+
+.textAlert3{
+    width: 336px;
+    height: 781;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    color: #495057;
+    font-weight: 400;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.buttonStyle3{
+    width: 336px;
     background-color: #FFFFFF;
     padding: 24px 0;
     border-radius: 24px;
@@ -139,6 +156,6 @@ body {
     margin-left: 24px;
     margin-right: 24px;
     
-} */
+}
 
  /* https://youtu.be/zILZ6-dlKBs?si=llfxHvMu5bIrVmfx&t=782*/
