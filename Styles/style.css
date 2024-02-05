@@ -130,19 +130,20 @@ body {
 }
 
 .betweenSpaceText{
-
+ 
 }
 
 
 .textAlert3{
     width: 336px;
-    height: 781;
+    height: 781px;
     font-family: 'Inter', sans-serif;
     font-size: 24px;
     color: #495057;
     font-weight: 400;
-  margin-left: 24px;
-  margin-right: 24px;
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-top: 32px;
 }
 
 .buttonStyle3{
@@ -152,9 +153,9 @@ body {
     border-radius: 24px;
     border: 1px solid #0A3871;
     color: #0A3871;
-    margin-top: 67px;
-    margin-left: 24px;
-    margin-right: 24px;
+    margin-top: 41px;
+    margin-left: 32px;
+    margin-right: 32px;
     
 }
 
