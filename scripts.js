@@ -3,3 +3,6 @@ function demoVisibility() {
     var inputText = document.getElementById("mensagem").value;
     document.getElementById("showText").innerText = inputText;
   }
+
+
+  
