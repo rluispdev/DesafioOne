@@ -14,7 +14,7 @@ body {
 }
 .configDisplayFlexMain{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     margin: 40px;
  
 }
@@ -96,7 +96,6 @@ body {
     margin-top: 283px;
     text-align: center;
   
-    
 }
 
 .bgCodedMessage{
@@ -129,11 +128,6 @@ body {
   
 }
 
-.betweenSpaceText{
- 
-}
-
-
 .textAlert3{
     width: 336px;
     height: 781px;
@@ -157,7 +151,4 @@ body {
     margin-left: 32px;
     margin-right: 32px;
     visibility: hidden;
-    
 }
-
- /* https://youtu.be/zILZ6-dlKBs?si=llfxHvMu5bIrVmfx&t=782*/
