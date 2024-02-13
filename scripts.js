@@ -1,7 +1,7 @@
  
-function demoVisibility() {
-    document.getElementById("mensagem").style.visibility = "hidden";
-    var inputText = document.getElementById("mensagem").value;
+function elementVisibility() {
+    document.getElementById("message").style.visibility = "hidden";
+    var inputText = document.getElementById("message").value;
     document.getElementById("showText").innerText = inputText;
 
     var buttonElement = document.getElementById("myButton");
@@ -11,14 +11,14 @@ function demoVisibility() {
     }
   }
  
-  function myFunction() {
-    var x = document.getElementById('myDIV');
-    if (x.style.display === 'none') {
-      x.style.display = 'none';
+  function configVisibility() {
+    var displayVisibility = document.getElementById('myDIV');
+    if (displayVisibility.style.display === 'none') {
+      displayVisibility.style.display = 'none';
 
     } else {
-      x.style.display = "none";
-      demoVisibility() 
+      displayVisibility.style.display = "none";
+      elementVisibility()
      
     }
   }
