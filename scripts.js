@@ -1,8 +1,9 @@
  
+ 
+  
 function elementVisibility() {
     document.getElementById("message").style.visibility = "hidden";
     var inputText = document.getElementById("message").value;
-    document.getElementById("showText").innerText = inputText;
 
     var buttonElement = document.getElementById("myButton");
     buttonElement.style.visibility = "visible";
@@ -10,7 +11,13 @@ function elementVisibility() {
      buttonElement.style.marginTop = `781px`
     }
   }
- 
+
+  document.addEventListener("DOMContentLoaded",function(){
+    document.getElementById("showText").innerText = inputText;
+    let encoded = window.btoa(inputText);
+    document.getElementById("showText").innerHTML = encoded;
+ })
+
   function configVisibility() {
     var displayVisibility = document.getElementById('myDIV');
     if (displayVisibility.style.display === 'none') {
@@ -18,8 +25,12 @@ function elementVisibility() {
 
     } else {
       displayVisibility.style.display = "none";
-      elementVisibility()
-     
+      var inputText = elementVisibility(); // Chama elementVisibility para obter o inputText
+      document.getElementById("showText").innerText = inputText;
+      let encoded = window.btoa(inputText);
+      document.getElementById("showText").innerHTML = encoded;
     }
   }
   
+
+ 
