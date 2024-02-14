@@ -60,16 +60,6 @@ document.addEventListener("DOMContentLoaded", function() {
   updateText();  
 });
 
-function configVisibility() {
-  var displayVisibility = document.getElementById('myDIV');
-  if (displayVisibility.style.display === 'none') {
-    displayVisibility.style.display = 'none';
-  } else {
-    displayVisibility.style.display = "none";
-    elementVisibility();
-    updateText();  
-  }
-}
 
 function showCryptoText(textCrypt) {
   var brokenLine = [];
@@ -80,3 +70,14 @@ function showCryptoText(textCrypt) {
   showTextElement.innerText = brokenLine.join('\n');
 }
  
+
+function configVisibility() {
+  var displayVisibility = document.getElementById('myDIV');
+  if (displayVisibility.style.display === 'none') {
+    displayVisibility.style.display = 'none';
+  } else {
+    displayVisibility.style.display = "none";
+    elementVisibility();
+    updateText();  
+  }
+}
