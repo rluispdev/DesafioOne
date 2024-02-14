@@ -25,38 +25,25 @@ document.addEventListener("DOMContentLoaded", function() {
   encodedText();  
 });
 
-function encoded() {
+
+function toggleVisibility(action) {
   var displayVisibility = document.getElementById('myDIV');
-  if (displayVisibility.style.display === 'none') {
+  if (displayVisibility.style.display === 'none' || action === 'hide') {
     displayVisibility.style.display = 'none';
   } else {
-    displayVisibility.style.display = "none";
+    displayVisibility.style.display = 'none';
     elementVisibility();
-    encodedText();  
+    if (action === 'encode') {
+      processText(window.btoa);
+    } else if (action === 'decode') {
+      processText(window.atob);
+    }
   }
 }
 
-function encodedText() {
+function processText(cryptoFunction) {
   var inputText = document.getElementById("message").value;
   document.getElementById("showText").innerText = inputText;
-  let encoded = window.btoa(inputText);
-  showCryptoText(encoded); 
-}
-
-function decoded() {
-  var displayVisibility = document.getElementById('myDIV');
-  if (displayVisibility.style.display === 'none') {
-    displayVisibility.style.display = 'none';
-  } else {
-    displayVisibility.style.display = "none";
-    elementVisibility();
-    decodedText();  
-  }
-}
-
-function decodedText() {
-  var inputText = document.getElementById("message").value;
-  document.getElementById("showText").innerText = inputText;
-  let decoded = window.atob(inputText);
-  showCryptoText(decoded); 
+  let cryptoResult = cryptoFunction(inputText);
+  showCryptoText(cryptoResult);
 }
