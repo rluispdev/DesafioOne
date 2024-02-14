@@ -5,6 +5,7 @@
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "DesafioOne"
+		"liveServer.settings.multiRootWorkspaceName": "DesafioOne",
+		"liveServer.settings.port": 5501
 	}
 }

@@ -1,40 +1,3 @@
- 
- 
-  
-// function elementVisibility() {
-//   document.getElementById("message").style.visibility = "hidden";
-//   var inputText = document.getElementById("message").value;
-
-//   var buttonElement = document.getElementById("myButton");
-//   buttonElement.style.visibility = "visible";
-//   if (buttonElement.style.visibility === 'visible') {
-//     buttonElement.style.marginTop = '781px';
-//   }
-
-//   return inputText; 
-// }
-
-// function updateText() {
-//   var inputText = document.getElementById("message").value;
-//   document.getElementById("showText").innerText = inputText;
-//   let encoded = window.btoa(inputText);
-//   document.getElementById("showText").innerHTML = encoded;
-// }
-
-// document.addEventListener("DOMContentLoaded", function() {
-//   updateText();  
-// });
-
-// function configVisibility() {
-//   var displayVisibility = document.getElementById('myDIV');
-//   if (displayVisibility.style.display === 'none') {
-//     displayVisibility.style.display = 'none';
-//   } else {
-//     displayVisibility.style.display = "none";
-//     elementVisibility();
-//     updateText();  
-//   }
-// }
 
 function elementVisibility() {
   document.getElementById("message").style.visibility = "hidden";
@@ -49,18 +12,6 @@ function elementVisibility() {
   return inputText; 
 }
 
-function updateText() {
-  var inputText = document.getElementById("message").value;
-  document.getElementById("showText").innerText = inputText;
-  let encoded = window.btoa(inputText);
-  showCryptoText(encoded); 
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  updateText();  
-});
-
-
 function showCryptoText(textCrypt) {
   var brokenLine = [];
   for (var i = 0; i < textCrypt.length; i += 23) { 
@@ -70,14 +21,42 @@ function showCryptoText(textCrypt) {
   showTextElement.innerText = brokenLine.join('\n');
 }
  
+document.addEventListener("DOMContentLoaded", function() {
+  encodedText();  
+});
 
-function configVisibility() {
+function encoded() {
   var displayVisibility = document.getElementById('myDIV');
   if (displayVisibility.style.display === 'none') {
     displayVisibility.style.display = 'none';
   } else {
     displayVisibility.style.display = "none";
     elementVisibility();
-    updateText();  
+    encodedText();  
   }
+}
+
+function encodedText() {
+  var inputText = document.getElementById("message").value;
+  document.getElementById("showText").innerText = inputText;
+  let encoded = window.btoa(inputText);
+  showCryptoText(encoded); 
+}
+
+function decoded() {
+  var displayVisibility = document.getElementById('myDIV');
+  if (displayVisibility.style.display === 'none') {
+    displayVisibility.style.display = 'none';
+  } else {
+    displayVisibility.style.display = "none";
+    elementVisibility();
+    decodedText();  
+  }
+}
+
+function decodedText() {
+  var inputText = document.getElementById("message").value;
+  document.getElementById("showText").innerText = inputText;
+  let decoded = window.atob(inputText);
+  showCryptoText(decoded); 
 }
