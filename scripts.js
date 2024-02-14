@@ -1,6 +1,41 @@
  
  
   
+// function elementVisibility() {
+//   document.getElementById("message").style.visibility = "hidden";
+//   var inputText = document.getElementById("message").value;
+
+//   var buttonElement = document.getElementById("myButton");
+//   buttonElement.style.visibility = "visible";
+//   if (buttonElement.style.visibility === 'visible') {
+//     buttonElement.style.marginTop = '781px';
+//   }
+
+//   return inputText; 
+// }
+
+// function updateText() {
+//   var inputText = document.getElementById("message").value;
+//   document.getElementById("showText").innerText = inputText;
+//   let encoded = window.btoa(inputText);
+//   document.getElementById("showText").innerHTML = encoded;
+// }
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   updateText();  
+// });
+
+// function configVisibility() {
+//   var displayVisibility = document.getElementById('myDIV');
+//   if (displayVisibility.style.display === 'none') {
+//     displayVisibility.style.display = 'none';
+//   } else {
+//     displayVisibility.style.display = "none";
+//     elementVisibility();
+//     updateText();  
+//   }
+// }
+
 function elementVisibility() {
   document.getElementById("message").style.visibility = "hidden";
   var inputText = document.getElementById("message").value;
@@ -11,18 +46,18 @@ function elementVisibility() {
     buttonElement.style.marginTop = '781px';
   }
 
-  return inputText; // Retorna o texto para ser usado fora da função
+  return inputText; 
 }
 
 function updateText() {
   var inputText = document.getElementById("message").value;
   document.getElementById("showText").innerText = inputText;
   let encoded = window.btoa(inputText);
-  document.getElementById("showText").innerHTML = encoded;
+  showCryptoText(encoded); 
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  updateText(); // Chama updateText para atualizar a codificação inicial
+  updateText();  
 });
 
 function configVisibility() {
@@ -32,8 +67,16 @@ function configVisibility() {
   } else {
     displayVisibility.style.display = "none";
     elementVisibility();
-    updateText(); // Atualiza a codificação quando a visibilidade é alterada
+    updateText();  
   }
 }
 
+function showCryptoText(textCrypt) {
+  var brokenLine = [];
+  for (var i = 0; i < textCrypt.length; i += 23) { 
+    brokenLine.push(textCrypt.substr(i, 23));
+  }
+  var showTextElement = document.getElementById("showText");
+  showTextElement.innerText = brokenLine.join('\n');
+}
  
