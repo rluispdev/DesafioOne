@@ -13,18 +13,13 @@ function elementVisibility() {
 }
 
 function showCryptoText(textCrypt) {
-  var brokenLine = [];
-  for (var i = 0; i < textCrypt.length; i += 23) { 
-    brokenLine.push(textCrypt.substr(i, 23));
-  }
   var showTextElement = document.getElementById("showText");
-  showTextElement.innerText = brokenLine.join('\n');
+  showTextElement.innerText = textCrypt;
 }
  
 document.addEventListener("DOMContentLoaded", function() {
   encodedText();  
 });
-
 
 function toggleVisibility(action) {
   var displayVisibility = document.getElementById('myDIV');
@@ -35,6 +30,7 @@ function toggleVisibility(action) {
     elementVisibility();
     if (action === 'encode') {
       processText(window.btoa);
+   
     } else if (action === 'decode') {
       processText(window.atob);
     }
@@ -46,4 +42,10 @@ function processText(cryptoFunction) {
   document.getElementById("showText").innerText = inputText;
   let cryptoResult = cryptoFunction(inputText);
   showCryptoText(cryptoResult);
+  
 }
+
+ 
+
+
+ 
