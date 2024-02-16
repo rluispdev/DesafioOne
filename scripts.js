@@ -16,7 +16,7 @@ function showCryptoText(textCrypt) {
   var showTextElement = document.getElementById("showText");
   showTextElement.innerText = textCrypt;
 }
- 
+
 document.addEventListener("DOMContentLoaded", function() {
   encodedText();  
 });
