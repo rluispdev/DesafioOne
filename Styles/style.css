@@ -14,7 +14,6 @@ body {
 }
 .configDisplayFlexMain{
     display: flex;
-    /* justify-content: space-between; */
     margin: 40px;
  
 }
@@ -67,26 +66,28 @@ body {
     margin-right: 10px;
 }
 
-.buttonEncrypt{
-    background-color: #0A3871;
+.btn {
     width: 328px;
     padding: 24px 0;
+    cursor: pointer;
     border-radius: 24px;
+    border: 1px solid #1D3470;
+}
+
+.buttonEncrypt{
     border: none;
     color: #FFFFFF;
-  
+    background-color:  #0A3871;
 }
+.buttonEncrypt:hover {background-color: #1D3470;}
 
 .buttonDecrypt{
-    background-color: #D8DFE8;
-    width: 328px;
-    padding: 24px 0;
-    border-radius: 24px;
-    border: 1px solid #0A3871;
+    background-color: #E5E5E5;
     color: #0A3871;
-   margin-left: 24px;
+    margin-left: 24px;
 }
-
+.buttonDecrypt:hover {background-color:#D8DFE8;}
+ 
 .alertGroup{
     padding-left: 168px;
     margin-top: 500px;
@@ -95,7 +96,6 @@ body {
 .textLayout{
     margin-top: 283px;
     text-align: center;
-  
 }
 
 .bgCodedMessage{
@@ -144,17 +144,14 @@ body {
 }
 
 .buttonCopy{
-    width: 336px; 
     background-color: #FFFFFF;
-    padding: 24px 0;
-    border-radius: 24px;
-    border: 1px solid #0A3871;
     color: #0A3871;
     position: absolute;  
     left: 32px; 
     top: 61px;  
     visibility: hidden;
 }
+.buttonCopy:hover {background-color:#D8DFE8;}
 
 .divContainer {
         position: relative;
