@@ -68,3 +68,10 @@ function toggleVisibility(action) {
 }
 
 
+//ButtonCopy
+
+function buttonCopy(){
+var copryText = document.getElementById("showText")
+copryText.ariaSelected
+navigator.clipboard.writeText(copryText.value)
+}
