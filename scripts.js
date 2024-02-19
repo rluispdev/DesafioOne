@@ -76,3 +76,4 @@ navigator.clipboard.writeText(copryText.value)
 
 }
 
+ 
