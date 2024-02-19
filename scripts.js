@@ -67,13 +67,39 @@ function toggleVisibility(action) {
   }
 }
 
+// function buttonCopy() {
+//   var copyText = document.getElementById("showText");
+//   copyText.select();
+//   navigator.clipboard.writeText(copyText.value).then(function() {
+//     // Se a cópia for bem-sucedida
+//     console.log("Texto copiado com sucesso!");
+//     copyText.value = ""; // Limpar o campo após a cópia
+//   }).catch(function(error) {
+//     // Se houver algum erro na cópia
+//     console.error("Erro ao copiar texto: ", error);
+//   });
 
-//ButtonCopy
-function buttonCopy(){
-var copryText = document.getElementById("showText")
-copryText.ariaSelected
-navigator.clipboard.writeText(copryText.value)
+//   // Adicionar um evento de foco para atualizar a página
+//   copyText.addEventListener("focusout", function() {
+//     window.location.reload();
+//   });
+// }
 
+function buttonCopy() {
+  var copyText = document.getElementById("showText");
+  copyText.select();
+  navigator.clipboard.writeText(copyText.value).then(function() {
+    // Se a cópia for bem-sucedida
+    console.log("Texto copiado com sucesso!");
+    copyText.value = ""; // Limpar o campo após a cópia
+    document.getElementById("copiedImage").style.display = "block"; // Exibir a imagem
+  }).catch(function(error) {
+    // Se houver algum erro na cópia
+    console.error("Erro ao copiar texto: ", error);
+  });
+
+  // Adicionar um evento de foco para atualizar a página
+  copyText.addEventListener("focusout", function() {
+    window.location.reload();
+  });
 }
-
- 
