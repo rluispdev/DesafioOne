@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
   encodedText();  
 });
 
+
 function processText(cryptoFunction) {
   var inputText = document.getElementById("message").value;
   document.getElementById("showText").innerText = inputText;
@@ -33,28 +34,28 @@ function processText(cryptoFunction) {
   showCryptoText(cryptoResult);
 }
 
-//Srting -> Bin
+//Converte Srting -> Bin.
 const stringToBinary = (str) => {
   let binary = "";
   for (let i = 0; i < str.length; i++) {
-      const charBinary = str[i].charCodeAt(0).toString(2); // Adicione 0 como parâmetro
+      const charBinary = str[i].charCodeAt(0).toString(2);  
       binary += charBinary.padStart(8, '0');
   }
   return binary;
 };
 
-//Bin -> String
+//Converte Bin -> String.
 function bin2text(bin) {
-  bin = bin.split(""); // Remova o espaço aqui
+  bin = bin.split(""); 
   let result = "";
   for (let i = 0; i < bin.length; i += 8) {
-    let chunk = bin.slice(i, i + 8).join(""); // Pegue cada pedaço de 8 dígitos binários
-    result += String.fromCharCode(parseInt(chunk, 2)); // Converta para caractere
+    let chunk = bin.slice(i, i + 8).join("");  
+    result += String.fromCharCode(parseInt(chunk, 2));  
   }
   return result;
 };
 
-//Func MasterControl
+//Visibilidade.
 function toggleVisibility(action) {
   var displayVisibility = document.getElementById('myDIV');
   if (displayVisibility.style.display === 'none' || action === 'hide') {
@@ -73,14 +74,28 @@ function toggleVisibility(action) {
   }
 }
 
+//Desabilitar botão.
+function checkTextarea() {
+  var textarea = document.getElementById("message");
+  var encryptButton = document.getElementById("btn1");
+  var decryptButton = document.querySelector(".buttonDecrypt");
+
+  if (textarea.value.trim().length > 0) {
+    encryptButton.disabled = false;
+    decryptButton.disabled = false;
+  } else {
+    encryptButton.disabled = true;
+    decryptButton.disabled = true;
+  }
+}
+
 function buttonCopy() {
   var copyText = document.getElementById("showText");
   copyText.select();
   navigator.clipboard.writeText(copyText.value).then(function() {
-    // Se a cópia for bem-sucedida
     console.log("Texto copiado com sucesso!");
     copyText.value = ""; // Limpar o campo após a cópia
-    document.getElementById("copiedImage").style.display = "block"; // Exibir a imagem
+    document.getElementById("copiedImage").style.display = "block";  
   }).catch(function(error) {
     // Se houver algum erro na cópia
     console.error("Erro ao copiar texto: ", error);
@@ -91,3 +106,4 @@ function buttonCopy() {
     window.location.reload();
   });
 }
+

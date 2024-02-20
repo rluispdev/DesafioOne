@@ -17,7 +17,7 @@
         <section class="betweenSpace">
             <img src="./Images/zerum.png" alt="Logo" class ="logo" id="logo1">
           
-            <div class ="aligmentInput">  <textarea id="message" rows="5" cols="30" placeholder="Digite seu texto"  class = "removeStyle textField "></textarea>     
+            <div class ="aligmentInput">  <textarea id="message"  oninput="checkTextarea()" rows="5" cols="30" placeholder="Digite seu texto"  class = "removeStyle textField "></textarea>     
                 <div class ="zerumGrayLogo" >  <img src="./Images/zerumcut.png" id="zerumGray" alt="Logo Zerum" ></div>
             <section class="alertGroup">
                 <div class = "alert configDisplayFlex">
@@ -25,8 +25,8 @@
                     <img src="./Images/icon.png"> 
                     <p> Letras minúsculas e sem acento.</p>
                 </div>
-                <button id="btn1" class = "btn buttonEncrypt" onclick=" toggleVisibility(`encode`)" > Criptografar</button>
-                <button class = "btn buttonDecrypt" onclick=" toggleVisibility(`decode`)">Descriptografar</button>
+                <button id="btn1" class="btn buttonEncrypt" onclick="toggleVisibility('encode')" disabled>Criptografar</button>
+                <button class="btn buttonDecrypt" onclick="toggleVisibility('decode')" disabled>Descriptografar</button>
             </section>
         </div>
         </section>
