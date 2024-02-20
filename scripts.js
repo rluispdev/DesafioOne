@@ -89,11 +89,9 @@ function checkTextarea() {
   }
 }
 
-
 function goToHomePage() {
   window.location.reload(); // Recarregar a página
 }
-
 
 function buttonCopy() {
   var copyText = document.getElementById("showText");
