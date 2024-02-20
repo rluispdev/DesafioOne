@@ -176,5 +176,12 @@ body {
         max-width: 100%; /* Garanta que a imagem não ultrapasse a largura do contêiner */
     }
     
-
+.iconHouse {
+    position: absolute;
+    width: 10%;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
 

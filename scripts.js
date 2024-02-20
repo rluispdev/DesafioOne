@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function() {
   encodedText();  
 });
 
-
 function processText(cryptoFunction) {
   var inputText = document.getElementById("message").value;
   document.getElementById("showText").innerText = inputText;
@@ -40,20 +39,21 @@ const stringToBinary = (str) => {
   for (let i = 0; i < str.length; i++) {
       const charBinary = str[i].charCodeAt(0).toString(2);  
       binary += charBinary.padStart(8, '0');
+      
   }
   return binary;
 };
 
 //Converte Bin -> String.
 function bin2text(bin) {
-  bin = bin.split(""); 
+  bin = bin.replace(/\s/g, ''); // Remover todos os espaços em branco
   let result = "";
   for (let i = 0; i < bin.length; i += 8) {
-    let chunk = bin.slice(i, i + 8).join("");  
+    let chunk = bin.slice(i, i + 8);  
     result += String.fromCharCode(parseInt(chunk, 2));  
   }
   return result;
-};
+}
 
 //Visibilidade.
 function toggleVisibility(action) {
@@ -89,21 +89,27 @@ function checkTextarea() {
   }
 }
 
+
+function goToHomePage() {
+  window.location.reload(); // Recarregar a página
+}
+
+
 function buttonCopy() {
   var copyText = document.getElementById("showText");
-  copyText.select();
-  navigator.clipboard.writeText(copyText.value).then(function() {
-    console.log("Texto copiado com sucesso!");
+  navigator.clipboard.writeText(copyText.value)
+  .then(function() {
+    
     copyText.value = ""; // Limpar o campo após a cópia
     document.getElementById("copiedImage").style.display = "block";  
+    document.getElementById("myButton").style.display = "none";
+    document.getElementById("divIconContainer").style.display = "inline";
+
   }).catch(function(error) {
     // Se houver algum erro na cópia
     console.error("Erro ao copiar texto: ", error);
   });
 
-  // Adicionar um evento de foco para atualizar a página
-  copyText.addEventListener("focusout", function() {
-    window.location.reload();
-  });
 }
 
+document.getElementById("divIconContainer").addEventListener("click", goToHomePage);
