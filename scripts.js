@@ -68,6 +68,8 @@ function toggleVisibility(action) {
       processText(bin2text)
     }
     document.getElementById("zerumGray").parentElement.style.visibility = "visible";
+    document.getElementById("btn1").parentElement.style.visibility = "hidden";
+    document.getElementById("logo1").parentElement.style.visibility = "hidden";
   }
 }
 

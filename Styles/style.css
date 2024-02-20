@@ -172,7 +172,7 @@ body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 65%; /* Ajuste a largura da imagem para 50% da largura do contêiner */
+        width: 70%; /* Ajuste a largura da imagem para 50% da largura do contêiner */
         max-width: 100%; /* Garanta que a imagem não ultrapasse a largura do contêiner */
     }
     
