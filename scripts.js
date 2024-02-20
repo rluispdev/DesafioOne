@@ -1,15 +1,18 @@
 
 function elementVisibility() {
-  document.getElementById("message").style.visibility = "hidden";
-  var inputText = document.getElementById("message").value;
 
+  document.getElementById("message").style.visibility = "hidden";
+
+  var inputText = document.getElementById("message").value;
   var buttonElement = document.getElementById("myButton");
   buttonElement.style.visibility = "visible";
   if (buttonElement.style.visibility === 'visible') {
     buttonElement.style.marginTop = '781px';
+  
   }
   return inputText; 
 }
+
 function showCryptoText(textCrypt) {
   var showTextElement = document.getElementById("showText");
   showTextElement.style.visibility = "visible";
@@ -64,6 +67,7 @@ function toggleVisibility(action) {
     } else if (action === 'decode') {
       processText(bin2text)
     }
+    document.getElementById("zerumGray").parentElement.style.visibility = "visible";
   }
 }
 
