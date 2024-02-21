@@ -33,16 +33,16 @@ function processText(cryptoFunction) {
   showCryptoText(cryptoResult);
 }
 
-//Converte Srting -> Bin.
-const stringToBinary = (str) => {
-  let binary = "";
-  for (let i = 0; i < str.length; i++) {
-      const charBinary = str[i].charCodeAt(0).toString(2);  
-      binary += charBinary.padStart(8, '0');
+// //Converte Srting -> Bin.
+// const stringToBinary = (str) => {
+//   let binary = "";
+//   for (let i = 0; i < str.length; i++) {
+//       const charBinary = str[i].charCodeAt(0).toString(2);  
+//       binary += charBinary.padStart(8, '0');
       
-  }
-  return binary;
-};
+//   }
+//   return binary;
+// };
 
 
 function bin2text(bin) {
@@ -76,8 +76,9 @@ function bin2text(bin) {
 
     return result;
   } catch (error) {
-      return "Erro: Ocorreu um erro durante a conversão.";  
     document.getElementById("errorConvert").style.visibility = "visible"; 
+      return "Erro: Ocorreu um erro durante a conversão.";  
+  
   }
 }
  
