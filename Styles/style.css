@@ -16,11 +16,13 @@ body {
     display: flex;
     margin: 40px;
     padding-bottom: 10%;
+    
 }
 
 .configDisplayFlex{
     display: flex;
     align-items: center;
+   
 }
 
 .logo {
@@ -198,3 +200,17 @@ body {
  
   }
 
+.takeError {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;  
+    max-width: 100%;  
+}
+
+.errorConvert {
+    font-weight: bold;
+    font-style: italic;
+  }

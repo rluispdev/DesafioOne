@@ -44,17 +44,43 @@ const stringToBinary = (str) => {
   return binary;
 };
 
-//Converte Bin -> String.
-function bin2text(bin) {
-  bin = bin.replace(/\s/g, ''); // Remover todos os espaços em branco
-  let result = "";
-  for (let i = 0; i < bin.length; i += 8) {
-    let chunk = bin.slice(i, i + 8);  
-    result += String.fromCharCode(parseInt(chunk, 2));  
-  }
-  return result;
-}
 
+function bin2text(bin) {
+  try {
+    // Verificar se a entrada contém apenas 0s e 1s
+    if (!/^[01]+$/.test(bin)) {
+      throw new Error('Erro: A entrada deve conter apenas 0s e 1s (números binários).');
+    }
+    bin = bin.replace(/\s/g, ''); 
+    let result = "";
+    for (let i = 0; i < bin.length; i += 8) {
+      let chunk = bin.slice(i, i + 8);  
+
+      // Converter o byte em um caractere ASCII
+      let asciiValue = parseInt(chunk, 2);
+      
+      // Verificar se o valor ASCII está dentro do intervalo válido (32 a 126 são os caracteres imprimíveis na tabela ASCII)
+      if (asciiValue >= 32 && asciiValue <= 126) {
+        // Adicionar o caractere ASCII válido ao resultado
+        result += String.fromCharCode(asciiValue);
+      } else {
+        // Se o valor ASCII estiver fora do intervalo válido, lançar um erro
+        throw new Error('Erro: A entrada contém caracteres que não são ASCII válidos.');
+      }
+    }
+
+    if (result === "") {
+      document.getElementById("errorConvert").style.visibility = "visible"; 
+     return "Erro: A entrada não pôde ser convertida.";
+    }
+
+    return result;
+  } catch (error) {
+      return "Erro: Ocorreu um erro durante a conversão.";  
+    document.getElementById("errorConvert").style.visibility = "visible"; 
+  }
+}
+ 
 //Visibilidade.
 function toggleVisibility(action) {
   var displayVisibility = document.getElementById('myDIV');
@@ -97,7 +123,6 @@ function buttonCopy() {
   var copyText = document.getElementById("showText");
   navigator.clipboard.writeText(copyText.value)
   .then(function() {
-    
     copyText.value = ""; // Limpar o campo após a cópia
     document.getElementById("copiedImage").style.display = "block";  
     document.getElementById("myButton").style.display = "none";
@@ -107,7 +132,6 @@ function buttonCopy() {
     // Se houver algum erro na cópia
     console.error("Erro ao copiar texto: ", error);
   });
-
 }
 
 document.getElementById("divIconContainer").addEventListener("click", goToHomePage);
