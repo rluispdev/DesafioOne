@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 *{
     margin: 0;
@@ -203,14 +203,24 @@ body {
 .takeError {
     visibility: hidden;
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 25%;  
     max-width: 100%;  
 }
 
-.errorConvert {
-    font-weight: bold;
+ 
+.textErrorConvert {
+    width: 336px;
+    height: 400px;
+    font-size: 24px;
+    color: #495057;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
     font-style: italic;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-top: 32px;
   }
+  

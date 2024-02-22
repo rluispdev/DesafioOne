@@ -33,19 +33,20 @@ function processText(cryptoFunction) {
   showCryptoText(cryptoResult);
 }
 
-// //Converte Srting -> Bin.
-// const stringToBinary = (str) => {
-//   let binary = "";
-//   for (let i = 0; i < str.length; i++) {
-//       const charBinary = str[i].charCodeAt(0).toString(2);  
-//       binary += charBinary.padStart(8, '0');
+//Converte Srting -> Bin.
+const stringToBinary = (str) => {
+  let binary = "";
+  for (let i = 0; i < str.length; i++) {
+      const charBinary = str[i].charCodeAt(0).toString(2);  
+      binary += charBinary.padStart(8, '0');
       
-//   }
-//   return binary;
-// };
+  }
+  return binary;
+};
 
 
 function bin2text(bin) {
+
   try {
     // Verificar se a entrada contém apenas 0s e 1s
     if (!/^[01]+$/.test(bin)) {
@@ -76,11 +77,18 @@ function bin2text(bin) {
 
     return result;
   } catch (error) {
-    document.getElementById("errorConvert").style.visibility = "visible"; 
-      return "Erro: Ocorreu um erro durante a conversão.";  
-  
+
+    displayErrorMessage(error.message);
+    return errorMessage;
   }
 }
+
+function displayErrorMessage(errorMessage) {
+  const errorMessageElement = document.getElementById("textError");
+  errorMessageElement.textContent = errorMessage;
+  document.getElementById("errorConvert").style.visibility = "visible";
+}
+
  
 //Visibilidade.
 function toggleVisibility(action) {
@@ -121,6 +129,7 @@ function goToHomePage() {
 }
 
 function buttonCopy() {
+  
   var copyText = document.getElementById("showText");
   navigator.clipboard.writeText(copyText.value)
   .then(function() {
