@@ -1,14 +1,11 @@
 
 function elementVisibility() {
-
   document.getElementById("message").style.visibility = "hidden";
-
   var inputText = document.getElementById("message").value;
   var buttonElement = document.getElementById("myButton");
   buttonElement.style.visibility = "visible";
   if (buttonElement.style.visibility === 'visible') {
     buttonElement.style.marginTop = '781px';
-  
   }
   return inputText; 
 }
@@ -44,9 +41,7 @@ const stringToBinary = (str) => {
   return binary;
 };
 
-
 function bin2text(bin) {
-
   try {
     // Verificar se a entrada contém apenas 0s e 1s
     if (!/^[01]+$/.test(bin)) {
@@ -69,7 +64,6 @@ function bin2text(bin) {
         throw new Error('Erro: A entrada contém caracteres que não são ASCII válidos.');
       }
     }
-
     if (result === "") {
       document.getElementById("errorConvert").style.visibility = "visible"; 
      return "Erro: A entrada não pôde ser convertida.";
@@ -78,12 +72,8 @@ function bin2text(bin) {
     return result;
   } catch (error) {
 
-  // Esconder o botão copiar quando houver um erro
   document.getElementById("myButton").style.display = "none";
-
-  // Re-focar a textarea
   document.getElementById("message").focus();
-
   displayErrorMessage(error.message);
   return errorMessage;
   }
@@ -92,11 +82,11 @@ function bin2text(bin) {
 function displayErrorMessage(errorMessage) {
   const errorMessageElement = document.getElementById("textError");
   errorMessageElement.textContent = errorMessage;
- // document.getElementById("errorConvert").style.visibility = "visible";
   document.getElementById("errorConvert").style.display = "block";
+  document.getElementById("returnIcon").style.display = "inline";
+ 
 }
 
- 
 //Visibilidade.
 function toggleVisibility(action) {
   var displayVisibility = document.getElementById('myDIV');
@@ -132,25 +122,21 @@ function checkTextarea() {
 }
 
 function goToHomePage() {
-  window.location.reload(); // Recarregar a página
+  window.location.reload(); 
 }
 
 function buttonCopy() {
-
   var copyText = document.getElementById("showText");
   navigator.clipboard.writeText(copyText.value)
   .then(function() {
-    copyText.value = ""; // Limpar o campo após a cópia
+    copyText.value = "";
     document.getElementById("copiedImage").style.display = "block";  
     document.getElementById("myButton").style.display = "none";
     document.getElementById("divIconContainer").style.display = "inline";
 
   }).catch(function(error) {
-    // Se houver algum erro na cópia
     console.error("Erro ao copiar texto: ", error);
   });
 }
-
 document.getElementById("divIconContainer").addEventListener("click", goToHomePage);
-
- 
+document.getElementById("returnIcon").addEventListener("click", goToHomePage);
