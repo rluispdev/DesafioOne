@@ -78,15 +78,22 @@ function bin2text(bin) {
     return result;
   } catch (error) {
 
-    displayErrorMessage(error.message);
-    return errorMessage;
+  // Esconder o botão copiar quando houver um erro
+  document.getElementById("myButton").style.display = "none";
+
+  // Re-focar a textarea
+  document.getElementById("message").focus();
+
+  displayErrorMessage(error.message);
+  return errorMessage;
   }
 }
 
 function displayErrorMessage(errorMessage) {
   const errorMessageElement = document.getElementById("textError");
   errorMessageElement.textContent = errorMessage;
-  document.getElementById("errorConvert").style.visibility = "visible";
+ // document.getElementById("errorConvert").style.visibility = "visible";
+  document.getElementById("errorConvert").style.display = "block";
 }
 
  
@@ -129,7 +136,7 @@ function goToHomePage() {
 }
 
 function buttonCopy() {
-  
+
   var copyText = document.getElementById("showText");
   navigator.clipboard.writeText(copyText.value)
   .then(function() {
@@ -145,3 +152,5 @@ function buttonCopy() {
 }
 
 document.getElementById("divIconContainer").addEventListener("click", goToHomePage);
+
+ 

@@ -158,15 +158,14 @@ body {
     }
 
     #copiedImage {
-        display: none; /* Esconde a imagem inicialmente */
-        position: absolute; /* ou relative */
-        top: 50%;
+        display: none; 
+        position: absolute; 
+        top: 40%;
          left: 50%;
          transform: translate(-50%, -50%);
         width: 50%;
     
       }
-
 
       .zerumGrayLogo {
         visibility: hidden;
@@ -201,19 +200,19 @@ body {
   }
 
 .takeError {
-    visibility: hidden;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 25%;  
-    max-width: 100%;  
+       display: none; 
+       position: absolute; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+       width: 50%;
+       margin-top: 400px;
+       width: 25%;  
 }
 
- 
 .textErrorConvert {
+ 
     width: 336px;
-    height: 400px;
     font-size: 24px;
     color: #495057;
     font-family: "Roboto", sans-serif;
@@ -222,5 +221,10 @@ body {
     margin-left: 32px;
     margin-right: 32px;
     margin-top: 32px;
+ 
   }
   
+  
+  .container {
+    margin-top: 400px
+  }
