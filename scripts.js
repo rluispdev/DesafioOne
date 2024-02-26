@@ -5,7 +5,7 @@ function elementVisibility() {
   var buttonElement = document.getElementById("myButton");
   buttonElement.style.visibility = "visible";
   if (buttonElement.style.visibility === 'visible') {
-    buttonElement.style.marginTop = '781px';
+  buttonElement.style.marginTop = '781px';
   }
   return inputText; 
 }
@@ -14,7 +14,9 @@ function showCryptoText(textCrypt) {
   var showTextElement = document.getElementById("showText");
   showTextElement.style.visibility = "visible";
   if (showTextElement.style.visibility === 'visible') {
+  
     showTextElement.style.height = '781px';
+
   }
   showTextElement.innerText = textCrypt;
 }
