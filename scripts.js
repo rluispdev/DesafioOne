@@ -1,4 +1,5 @@
 
+//Tornar mensagens cript/descrip visíveis.
 function elementVisibility() {
   document.getElementById("message").style.visibility = "hidden";
   var inputText = document.getElementById("message").value;
@@ -10,6 +11,7 @@ function elementVisibility() {
   return inputText; 
 }
 
+//Configurar a visibilidade do texto criptografado.
 function showCryptoText(textCrypt) {
   var showTextElement = document.getElementById("showText");
   showTextElement.style.visibility = "visible";
@@ -21,10 +23,7 @@ function showCryptoText(textCrypt) {
   showTextElement.innerText = textCrypt;
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  encodedText();  
-});
-
+//Preparar o texto para receber criptografia ou descriptografia.
 function processText(cryptoFunction) {
   var inputText = document.getElementById("message").value;
   document.getElementById("showText").innerText = inputText;
@@ -81,6 +80,7 @@ function bin2text(bin) {
   }
 }
 
+//Exbir uma mensagem de erro ao usuário.
 function displayErrorMessage(errorMessage) {
   const errorMessageElement = document.getElementById("textError");
   errorMessageElement.textContent = errorMessage;
