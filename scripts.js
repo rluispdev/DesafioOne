@@ -13,10 +13,10 @@ function elementVisibility() {
 
 //Configurar a visibilidade do texto criptografado.
 function showCryptoText(textCrypt) {
+
   var showTextElement = document.getElementById("showText");
   showTextElement.style.visibility = "visible";
   if (showTextElement.style.visibility === 'visible') {
-  
     showTextElement.style.height = '781px';
 
   }
@@ -46,7 +46,7 @@ function bin2text(bin) {
   try {
     // Verificar se a entrada contém apenas 0s e 1s
     if (!/^[01]+$/.test(bin)) {
-      throw new Error('Erro: A entrada deve conter apenas 0s e 1s (números binários).');
+      throw new Error('Erro: A entrada deve conter apenas 0s e 1s (números binários válidos).');
     }
     bin = bin.replace(/\s/g, ''); 
     let result = "";
@@ -90,7 +90,7 @@ function displayErrorMessage(errorMessage) {
 }
 
 //Visibilidade.
-function toggleVisibility(action) {
+function toggleVisibility(action, title) {
   var displayVisibility = document.getElementById('myDIV');
   if (displayVisibility.style.display === 'none' || action === 'hide') {
     displayVisibility.style.display = 'none';
@@ -106,6 +106,7 @@ function toggleVisibility(action) {
     document.getElementById("btn1").parentElement.style.visibility = "hidden";
     document.getElementById("logo1").parentElement.style.visibility = "hidden";
   }
+  document.getElementById('title').innerText = title;
 }
 
 //Desabilitar botão.
@@ -129,9 +130,11 @@ function goToHomePage() {
 
 function buttonCopy() {
   var copyText = document.getElementById("showText");
+  var titleElement = document.getElementById('title');
   navigator.clipboard.writeText(copyText.value)
   .then(function() {
     copyText.value = "";
+    titleElement.innerText = "";
     document.getElementById("copiedImage").style.display = "block";  
     document.getElementById("myButton").style.display = "none";
     document.getElementById("divIconContainer").style.display = "inline";
@@ -142,3 +145,6 @@ function buttonCopy() {
 }
 document.getElementById("divIconContainer").addEventListener("click", goToHomePage);
 document.getElementById("returnIcon").addEventListener("click", goToHomePage);
+
+
+ 

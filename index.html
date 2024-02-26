@@ -23,8 +23,8 @@
                     <img src="./Images/icon.png"> 
                     <p> Atenção:  As letras devem estar sem acento.</p>
                 </div>
-                <button id="btn1" class="btn buttonEncrypt" onclick="toggleVisibility('encode')" disabled>Criptografar</button>
-                <button class="btn buttonDecrypt" onclick="toggleVisibility('decode')" disabled>Descriptografar</button>
+                <button id="btn1" class="btn buttonEncrypt" onclick="toggleVisibility('encode', 'Texto Criptografado')" disabled>Criptografar</button>
+                <button class="btn buttonDecrypt" onclick="toggleVisibility('decode', 'Texto Descriptografado')" disabled>Descriptografar</button>
             </section>
         </div>
         </section>
@@ -43,6 +43,7 @@
                     <div id="errorConvert" class="textErrorConvert">
                         <span id="textError" ></span>
                    </div>
+                   <h2 id= "title" class="titleMessage"></h2>
                    <textarea class = "textAlert3" id="showText" readonly></textarea>
                 <button id="myButton" class = "btn buttonCopy" onclick="buttonCopy()">
                     Copiar

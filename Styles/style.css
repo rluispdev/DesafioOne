@@ -136,7 +136,7 @@ body {
     font-weight: 400;
   margin-left: 32px;
   margin-right: 32px;
-  margin-top: 32px;
+  margin-top: 20px;
   border: unset;
   border-color: transparent;
   outline: none;
@@ -232,4 +232,8 @@ body {
  
   }
   
-  
+  .titleMessage{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    text-align: center;
+  }
