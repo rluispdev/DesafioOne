@@ -13,3 +13,5 @@ Projeto  criado para como resolução para o challenge do Programa One Next Educ
 - ``JavaScript``
 - ``CSS``
 - ``Gemini``
+- ``Inkscape``
+- ``Simulator - Xcode``
