@@ -1,0 +1,135 @@
+@media screen and (max-width: 640px){
+    body {
+        height: 10%;
+        min-width: 0%;
+    }
+    .configDisplayFlexMain{
+        flex-direction: column;
+        padding-bottom: 10%; 
+    }
+
+    .aligmentInput{
+        width: 200px;
+    }
+    .btn {
+        padding: 20px 0;
+        align-items: center;
+    }
+    
+    .buttonEncrypt{
+        margin-bottom: 10%;
+    }
+   
+    .buttonDecrypt{
+        margin-left: 0%;
+    }
+
+    .alert {
+        font-size: 12px;
+        white-space: nowrap; 
+       }
+
+.alertGroup{
+   padding-left: 0%;
+   margin-top: 0px;
+   margin-bottom: 10%;
+}
+
+.removeStyle.textField{
+    width: 343px
+}
+  .logo{
+    padding: 10px;
+    width: 80px; 
+  }
+  .removeStyle.textField{
+    padding-left: 20px;
+ 
+  }
+
+.bgCodedMessage {
+     width: 350px;
+     height: 400px;
+     border-radius: 32px;
+}
+ 
+.bg-Container{
+    position: absolute;
+    width: 400px;
+}
+.textLayout {
+    top: 20px;  
+    left: 10px;  
+    padding: 10px;
+    top: 450px;
+   }
+
+.textLayout img{
+ display: none;
+}
+
+.textLayout{
+    background-color: #FFFFFF;
+     width: 327px;
+     height: 200px;
+     border-radius: 32px;
+ }
+
+ .textConf{
+  margin-top: 25px;
+ }
+
+.textMargin{
+    margin-left: 0%;
+    margin-right: 64px;
+}
+
+.textAlert3{
+   text-align: center;
+    margin-left: 9px; 
+    border-radius: 15px;
+}
+
+.takeSuccess {
+    top: 35%;
+    margin-top: 0%;
+  }
+
+  .takeError {
+    margin-top: 25%;
+    width: 20%;
+}
+
+.zerumGrayLogo{
+    display: none;
+}
+
+.showTextElement {
+    height: 400px;
+  }
+
+  .buttonCopy{
+    left: 15px; 
+    top: 120px;
+}
+.iconHouse {
+    top: 90%
+}
+
+.iconReturn{
+    top: 350px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    background-color: #000000;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    padding: 15px;
+    z-index: 100;  
+}
+   } 

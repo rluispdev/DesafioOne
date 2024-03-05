@@ -1,4 +1,6 @@
 
+
+ 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 *{
@@ -9,31 +11,26 @@
 body {
     background-color: #E5E5E5;
     height: 100vh;
-    width: 100vh;
-
+    min-width: 100vh;
+    overflow-x: hidden; 
 }
 .configDisplayFlexMain{
     display: flex;
     margin: 40px;
-    padding-bottom: 10%;
-    
-}
+    padding-bottom: 5% 
 
+}
 .configDisplayFlex{
     display: flex;
     align-items: center;
-   
 }
 
 .logo {
-
     padding: 48px;
    width: 120px;
-  
 }
 .aligmentInput {
     width: 944px;
-
 }
 .removeStyle.textField{
     padding-left: 168px;
@@ -42,9 +39,7 @@ body {
     font-size: 32px;
     color: #0A3871;
     font-weight: 400;
-
 }
-
 .removeStyle {
   border: unset;
   padding: unset;
@@ -52,16 +47,13 @@ body {
   outline: none;
   border-color: transparent;
 }
-
 .alert {
     font-family: 'Inter', sans-serif;
     font-size: 12px;
     color: #495057;
     font-weight: 400;
     padding-bottom: 8px;
-   
 }
-
 .alert img {
     margin-right: 10px;
 }
@@ -92,12 +84,23 @@ body {
     padding-left: 168px;
     margin-top: 500px;
 }
-
-.textLayout{
-    margin-top: 283px;
-    text-align: center;
+ .textLayout{
+    background-color: #FFFFFF;
+     height: 944px;
+     border-radius: 32px;
+     align-items: center;
+    
+ }
+ .textConf{
+  width: 400px;
+  margin-top: 243px;
+  text-align: center;
+ }
+.textMargin{
+    margin-left: 32px;
+    margin-right: 32px;
+     
 }
-
 .bgCodedMessage{
     display: flex;
     background-color: #FFFFFF;
@@ -106,18 +109,23 @@ body {
      height: 944px;
      border-radius: 32px;
      margin-right: 1000px;
-
 }
 
+.hidden {
+    display: none;
+  }
+.bg-Container{
+    position: relative;
+    width: 400px;
+    border-radius: 32px;
+}
 .textAlert{
     font-family: 'Inter', sans-serif;
     font-size: 24px;
     color: #343A40;
     font-weight: 700;
     padding: 16px;
-   
 }
-
 .textAlert2{
     font-family: 'Inter', sans-serif;
     font-size: 16px;
@@ -127,13 +135,13 @@ body {
   margin-right: 24px;
   
 }
-
 .textAlert3{
-    width: 336px;
-    font-family: 'Inter', sans-serif;
-    font-size: 24px;
-    color: #495057;
-    font-weight: 400;
+
+width: 336px;
+ font-family: 'Inter', sans-serif;
+font-size: 24px;
+ color: #495057;
+ font-weight: 400;
   margin-left: 32px;
   margin-right: 32px;
   margin-top: 20px;
@@ -156,17 +164,6 @@ body {
 .divContainer {
         position: relative;
     }
-
-    #copiedImage {
-        display: none; 
-        position: absolute; 
-        top: 40%;
-         left: 50%;
-         transform: translate(-50%, -50%);
-        width: 50%;
-    
-      }
-
       .zerumGrayLogo {
         visibility: hidden;
         position: absolute;
@@ -176,16 +173,14 @@ body {
         width: 70%;  
         max-width: 100%;  
     }
-    
+
 .iconHouse {
     position: absolute;
     width: 10%;
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
 }
-
 .iconReturn{
     position: absolute;
     width: 10%;
@@ -193,7 +188,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
- 
 .footer {
     position: fixed;
     left: 0;
@@ -204,17 +198,25 @@ body {
     font-family: 'Inter', sans-serif;
     text-align: center;
    padding: 15px;
- 
   }
 
+   .takeSuccess {
+        display: none; 
+        position: absolute; 
+        top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         margin-top: 100px;
+        width: 50%;
+    
+      }
 .takeError {
        display: none; 
        position: absolute; 
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-       width: 50%;
-       margin-top: 400px;
+       margin-top: 420px;
        width: 25%;  
 }
 
@@ -237,3 +239,5 @@ body {
     font-weight: 700;
     text-align: center;
   }
+  
+ 

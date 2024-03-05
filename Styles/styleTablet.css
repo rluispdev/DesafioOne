@@ -1,0 +1,155 @@
+@media screen and (min-width: 641px) and (max-width: 1420px) {
+    body {
+        height: 10%;
+        min-width: 0%;
+    }
+    .configDisplayFlexMain{
+        flex-direction: column;
+        padding-bottom: 10%; 
+    }
+    
+    .aligmentInput {
+        width: 700px;
+    }
+    .btn {
+        padding: 20px 0;
+        align-items: center;
+    }
+    
+    .buttonEncrypt{
+        margin-bottom: 0%;
+    }
+   
+    .buttonDecrypt{
+        margin-left: 5%;
+    }
+
+    .alert {
+        font-size: 12px;
+        white-space: nowrap; 
+       }
+
+.alertGroup{
+   padding-left: 0%;
+   margin-top: 0px;
+   margin-bottom: 5%;
+   
+}
+
+.removeStyle.textField{
+    width: 700px
+}
+.logo {
+    padding: 48px;
+   width: 120px;
+}
+  .removeStyle.textField{
+    padding-left: 20px;
+    height: 590px;
+  }
+
+.bgCodedMessage {
+     width: 700px;
+     height: 590px;
+     border-radius: 32px;
+}
+ 
+.bg-Container{
+    position: absolute;
+    width: 400px;
+}
+.textLayout {
+    top: 20px;  
+    left: 10px;  
+    padding: 10px;
+    top: 450px;
+   }
+
+.textLayout img{
+ display: none;
+}
+
+.textLayout{
+    background-color: #FFFFFF;
+     width: 700px;
+     height: 133px;
+     border-radius: 32px;
+     align-items: normal;
+ }
+
+ .textConf{
+  margin-top: 30px;
+  width: 700px;
+ }
+
+.textMargin{
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.textAlert{
+    padding: 0px;
+}
+
+.textAlert2{
+    padding: 10px;
+}
+
+.textAlert3{
+   text-align: center;
+    margin-left: 40px; 
+    border-radius: 15px;
+    width: 600px;
+}
+
+.takeSuccess {
+     margin-top: 20px;
+     width: 35%;
+    
+  }
+
+  .takeError {
+    margin-top: 25%;
+    width: 20%;
+}
+
+.textErrorConvert {
+    width: 600px;
+    text-align: center;
+}
+
+
+.zerumGrayLogo{
+    display: none;
+}
+
+.showTextElement {
+    height: 400px;
+  }
+
+  .buttonCopy{
+    left: 180px; 
+    top: 150px;
+  
+}
+.iconHouse {
+    top: 140%
+}
+
+.iconReturn{
+    top: 500px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    padding: 15px;
+    z-index: 100;  
+}
+   } 

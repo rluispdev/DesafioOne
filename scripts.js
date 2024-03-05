@@ -1,27 +1,37 @@
-
+ 
 //Tornar mensagens cript/descrip visíveis.
 function elementVisibility() {
   document.getElementById("message").style.visibility = "hidden";
   var inputText = document.getElementById("message").value;
   var buttonElement = document.getElementById("myButton");
   buttonElement.style.visibility = "visible";
-  if (buttonElement.style.visibility === 'visible') {
-  buttonElement.style.marginTop = '781px';
+  // Obtenção do tamanho da tela
+  const windowWidth = window.innerWidth;
+  // Lógica condicional para o tamanho da tela 
+  if (windowWidth <= 1400) { // Por exemplo, em telas menores que 1400px
+    buttonElement.style.marginTop = '300px';
+  } else {
+    buttonElement.style.marginTop = '781px';
   }
+
   return inputText; 
 }
 
 //Configurar a visibilidade do texto criptografado.
 function showCryptoText(textCrypt) {
-
   var showTextElement = document.getElementById("showText");
   showTextElement.style.visibility = "visible";
-  if (showTextElement.style.visibility === 'visible') {
+  // Obtenção do tamanho da tela
+  const windowWidth = window.innerWidth;
+  // Lógica condicional para o tamanho da tela 
+  if (windowWidth <= 1400) { // Por exemplo, em telas menores que 1400px
+    showTextElement.style.height = '300px'; // Valor de exemplo
+  } else {
     showTextElement.style.height = '781px';
-
   }
   showTextElement.innerText = textCrypt;
 }
+
 
 //Preparar o texto para receber criptografia ou descriptografia.
 function processText(cryptoFunction) {
@@ -29,6 +39,7 @@ function processText(cryptoFunction) {
   document.getElementById("showText").innerText = inputText;
   let cryptoResult = cryptoFunction(inputText);
   showCryptoText(cryptoResult);
+  onMessageConverted()
 }
 
 //Converte Srting -> Bin.
@@ -52,10 +63,8 @@ function bin2text(bin) {
     let result = "";
     for (let i = 0; i < bin.length; i += 8) {
       let chunk = bin.slice(i, i + 8);  
-
       // Converter o byte em um caractere ASCII
       let asciiValue = parseInt(chunk, 2);
-      
       // Verificar se o valor ASCII está dentro do intervalo válido (32 a 126 são os caracteres imprimíveis na tabela ASCII)
       if (asciiValue >= 32 && asciiValue <= 126) {
         // Adicionar o caractere ASCII válido ao resultado
@@ -76,6 +85,9 @@ function bin2text(bin) {
   document.getElementById("myButton").style.display = "none";
   document.getElementById("message").focus();
   displayErrorMessage(error.message);
+  showBgCodeMessage();
+  document.getElementById("btn1").parentElement.style.visibility = "hidden";
+  document.getElementById("zerumGray").parentElement.style.visibility = "visible";
   return errorMessage;
   }
 }
@@ -104,7 +116,7 @@ function toggleVisibility(action, title) {
     }
     document.getElementById("zerumGray").parentElement.style.visibility = "visible";
     document.getElementById("btn1").parentElement.style.visibility = "hidden";
-    document.getElementById("logo1").parentElement.style.visibility = "hidden";
+    document.getElementById("logo1").parentElement.style.visibility = "visible";
   }
   document.getElementById('title').innerText = title;
 }
@@ -122,6 +134,22 @@ function checkTextarea() {
     encryptButton.disabled = true;
     decryptButton.disabled = true;
   }
+}
+
+var textarea = document.getElementById("message");
+textarea.addEventListener('input', checkTextarea);
+
+function checkTextarea() {
+  var textarea = document.getElementById("message");
+  var encryptButton = document.getElementById("btn1");
+  var decryptButton = document.querySelector(".buttonDecrypt");
+
+  // Verifica o conteúdo da textarea:
+  var hasContent = textarea.value.trim().length > 0;
+
+  // Ativa/desativa os botões com base no conteúdo
+  encryptButton.disabled = !hasContent; 
+  decryptButton.disabled = !hasContent; 
 }
 
 function goToHomePage() {
@@ -147,4 +175,12 @@ document.getElementById("divIconContainer").addEventListener("click", goToHomePa
 document.getElementById("returnIcon").addEventListener("click", goToHomePage);
 
 
- 
+function showBgCodeMessage() {
+  const bgCodeMessage = document.querySelector(".bgCodedMessage");
+  bgCodeMessage.classList.remove("hidden");
+}
+
+// Exemplo de evento que chama a função após a conversão
+function onMessageConverted() {
+  showBgCodeMessage();
+}
